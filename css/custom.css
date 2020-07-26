@@ -1,0 +1,21 @@
+p
+{
+	 font: 20px Arial, sans-serif;
+}
+
+
+.button {
+ 	background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.centeredimage
+{
+	text-align: center;
+}

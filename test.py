@@ -54,7 +54,10 @@ def main():
 		
 
 		outputfileName=str(row)+".html"
-		previousfileName=str(row-1)+".html"
+		if(row!=1):
+			previousfileName=str(row-1)+".html"
+		else:
+			previousfileName="index.html"	
 		nextFileName=str(row+1)+".html"
 		outfile=open(outputfileName, 'w')
 		htmlData=templateHTML

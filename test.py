@@ -20,13 +20,14 @@ def getDownloadFileURL(url):
 
 def formatText(textData):
 	
-	textData=str(textData)	
+	textData=str(textData)
+	textData=textData.strip()
 	if(textData.isnumeric()):
 		textData=int(textData)
-	textData=textData.strip()
 	
 	
-	return textData
+	
+	return str(textData)
 
 
 def main():
@@ -91,6 +92,7 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 		category=formatText(sheet.cell_value(row, 5))
 		question_text=formatText(sheet.cell_value(row, 6))
 		question_image=formatText(sheet.cell_value(row, 7))
+		#print(question_text)
 
 		optionAImage=sheet.cell_value(row, 8)
 		optionAText=formatText(sheet.cell_value(row, 9))

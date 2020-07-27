@@ -4,16 +4,20 @@ import os
 
 
 def getDownloadFileURL(url):
-
+	
+	
 	url=url.replace("https://drive.google.com/open?id=", "")
 	url=url.replace("https://docs.google.com/drawings/d/", "")
 	url=url.replace("https://drive.google.com/file/d/", "")
 	url=url.replace("/edit?usp=sharing", "")	
 	url=url.replace("/view?usp=sharing", "")
-
-	fileID=url
-	return "https://drive.google.com/uc?export=download&id="+fileID
+	if(url.strip()+""==""):
+		downloadURL=""
+	else:
+		downloadURL="https://drive.google.com/uc?export=download&id="+url
 	
+	return downloadURL
+
 def formatText(textData):
 	
 	textData=str(textData)	
@@ -79,7 +83,7 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 	for row in range(1,rows):
 		srno=formatText(sheet.cell_value(row, 0))
 		level=formatText(sheet.cell_value(row, 1))
-		print(row)
+		#print(row)
 		
 		version=formatText(sheet.cell_value(row, 2))
 		classNumber=formatText(sheet.cell_value(row, 3)) 
@@ -118,19 +122,42 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 		htmlData=htmlData.replace("#version", str(version))
 		
 		htmlData=htmlData.replace("#Level", level)
-		htmlData=htmlData.replace("#questionimage", "<img src='"+getDownloadFileURL(question_image)+"'>")
+		imagePath=getDownloadFileURL(question_image)
+		if(imagePath):
+			htmlData=htmlData.replace("#questionimage", "<img src='"+imagePath+"'>")
 		
 		#htmlData=htmlData.replace("#optionA", "<img src='"+optionAImage+"'>")
 		if(optionAText):
 			htmlData=htmlData.replace("#optionA", optionAText)
-			htmlData=htmlData.replace("#optionB", optionBText)
-			htmlData=htmlData.replace("#optionC", optionCText)
-			htmlData=htmlData.replace("#optionD", optionDText)
+			
 		else:
 			htmlData=htmlData.replace("#optionA", "<img src='"+getDownloadFileURL(optionAImage)+"'>")
+			
+
+		if(optionBText):
+			
+			htmlData=htmlData.replace("#optionB", optionBText)
+			
+			
+		else:
+			
 			htmlData=htmlData.replace("#optionB", "<img src='"+getDownloadFileURL(optionBImage)+"'>")
+			
+		if(optionCText):
+			
+			htmlData=htmlData.replace("#optionC", optionCText)
+			
+		else:
+			
 			htmlData=htmlData.replace("#optionC", "<img src='"+getDownloadFileURL(optionCImage)+"'>")
+				
+		if(optionDText):
+			
+			htmlData=htmlData.replace("#optionD", optionDText)
+		else:
+			
 			htmlData=htmlData.replace("#optionD", "<img src='"+getDownloadFileURL(optionDImage)+"'>")	
+
 		htmlData=htmlData.replace("#question", question_text)
 		htmlData=htmlData.replace("#AnswerOption", answer)
 		htmlData=htmlData.replace("#previousLink", previousfileName)

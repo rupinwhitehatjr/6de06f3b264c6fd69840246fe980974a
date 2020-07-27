@@ -1,7 +1,7 @@
 #print("a")
 import xlrd
 import os
-
+from datetime import datetime
 allowed=['BEG (Evaluation)', 'INT(Evaluation)', 'Advanced Quiz Questions', 'PRO(Evaluation)', 'PRO(V2)']
 def getDownloadFileURL(url):
 	isdrawing=False
@@ -59,6 +59,26 @@ def main():
 			generateHTMLFiles(xlFile,index,sheetname)
 			updateIndexFile(sheetname)
 		index=index+1
+	addDateInIndexFile()
+
+def addDateInIndexFile():
+	indexfile = open("index.html", "r")
+	indexhtml=indexfile.read()
+	indexfile.close()
+
+	
+
+	today = datetime.now()
+
+	# dd/mm/YY
+	d1 = today.strftime("%d/%m/%Y %T")	
+	#print(d1)
+
+	indexhtml=indexhtml.replace("#nextbutton","&nbsp;")
+	indexhtml=indexhtml.replace("#date",d1)
+	with open('index.html', 'wb') as temp_file:
+			temp_file.write(bytes(indexhtml, 'utf-8'))
+
 
 def updateIndexFile(lsheetname):
 	indexfile = open("index.html", "r")

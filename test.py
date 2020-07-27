@@ -2,7 +2,7 @@
 import xlrd
 import os
 
-
+allowed=['BEG (Evaluation)', 'INT(Evaluation)', 'Advanced Quiz Questions', 'PRO(Evaluation)', 'PRO(V2)']
 def getDownloadFileURL(url):
 	
 	
@@ -31,7 +31,7 @@ def formatText(textData):
 
 
 def main():
-	xlFile=xlrd.open_workbook("QuizQuestions.xlsx")
+	xlFile=xlrd.open_workbook("Be a Quiz Master - Challenge (Responses).xlsx")
 	indexTemplatefile = open("indexTemplate.html", "r")
 	indexhtml=indexTemplatefile.read()
 	indexTemplatefile.close()
@@ -42,11 +42,16 @@ def main():
 	#templateFile = open("template.html", "r")
 	#templateHTML=templateFile.read()
 	index=0
+	#print(xlFile.sheet_names())
+	#exit()
 	for sheetname in xlFile.sheet_names():
-		if not os.path.exists(sheetname):
-			os.mkdir(sheetname)
-		generateHTMLFiles(xlFile,index,sheetname)
-		updateIndexFile(sheetname)
+		
+		if(sheetname in allowed):
+			print(sheetname)
+			if not os.path.exists(sheetname):
+				os.mkdir(sheetname)
+			generateHTMLFiles(xlFile,index,sheetname)
+			updateIndexFile(sheetname)
 		index=index+1
 
 def updateIndexFile(lsheetname):
@@ -80,33 +85,35 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 	#print(rows)
 	# For row 0 and column 0     
 	#print(sheet.cell_value(0, 0))
-
+	offset=2
 	for row in range(1,rows):
-		srno=formatText(sheet.cell_value(row, 0))
-		level=formatText(sheet.cell_value(row, 1))
+		srno=formatText(sheet.cell_value(row, offset+0))
+		level=formatText(sheet.cell_value(row, offset+1))
 		#print(row)
 		
-		version=formatText(sheet.cell_value(row, 2))
-		classNumber=formatText(sheet.cell_value(row, 3)) 
-		question_number=formatText(sheet.cell_value(row, 4)) 
-		category=formatText(sheet.cell_value(row, 5))
-		question_text=formatText(sheet.cell_value(row, 6))
-		question_image=formatText(sheet.cell_value(row, 7))
+		version=formatText(sheet.cell_value(row, offset+2))
+		classNumber=formatText(sheet.cell_value(row, offset+3)) 
+		question_number=formatText(sheet.cell_value(row, offset+4)) 
+		category=formatText(sheet.cell_value(row, offset+5))
+		question_text=formatText(sheet.cell_value(row, offset+6))
+		question_image=formatText(sheet.cell_value(row, offset+7))
 		#print(question_text)
 
-		optionAImage=sheet.cell_value(row, 8)
-		optionAText=formatText(sheet.cell_value(row, 9))
+		optionAImage=sheet.cell_value(row, offset+8)
+		optionAText=formatText(sheet.cell_value(row, offset+9))
 
-		optionBImage=sheet.cell_value(row, 10)
-		optionBText=formatText(sheet.cell_value(row, 11))
+		optionBImage=sheet.cell_value(row, offset+10)
+		optionBText=formatText(sheet.cell_value(row, offset+11))
 
-		optionCImage=sheet.cell_value(row, 12)
-		optionCText=formatText(sheet.cell_value(row, 13))
+		optionCImage=sheet.cell_value(row, offset+12)
+		optionCText=formatText(sheet.cell_value(row, offset+13))
 
-		optionDImage=sheet.cell_value(row, 14)
-		optionDText=formatText(sheet.cell_value(row, 15))
-		answer=sheet.cell_value(row, 16)
-		explaination=sheet.cell_value(row, 19)
+		optionDImage=sheet.cell_value(row, offset+14)
+		optionDText=formatText(sheet.cell_value(row, offset+15))
+		answer=sheet.cell_value(row, offset+16)
+		explaination=sheet.cell_value(row, offset+17)
+		activity=sheet.cell_value(row, offset+18)
+		solution=sheet.cell_value(row, offset+19)
 
 		
 
@@ -165,6 +172,8 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 		htmlData=htmlData.replace("#previousLink", previousfileName)
 		htmlData=htmlData.replace("#nextLink", nextFileName)
 		htmlData=htmlData.replace("#Explaination", str(explaination))
+		htmlData=htmlData.replace("#activity", str(activity))
+		htmlData=htmlData.replace("#solution", str(solution))
 		with open(os.path.join(foldername, outputfileName), 'wb') as temp_file:
 			temp_file.write(bytes(htmlData, 'utf-8'))
 		#outfile.write(htmlData)

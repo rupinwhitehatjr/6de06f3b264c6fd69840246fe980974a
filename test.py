@@ -6,13 +6,14 @@ import os
 def getDownloadFileURL(url):
 
 	url=url.replace("https://drive.google.com/open?id=", "")
+	url=url.replace("https://docs.google.com/drawings/d/", "")
 	url=url.replace("https://drive.google.com/file/d/", "")
+	url=url.replace("/edit?usp=sharing", "")	
 	url=url.replace("/view?usp=sharing", "")
-
-
 
 	fileID=url
 	return "https://drive.google.com/uc?export=download&id="+fileID
+	
 def formatText(textData):
 	
 	textData=str(textData)	

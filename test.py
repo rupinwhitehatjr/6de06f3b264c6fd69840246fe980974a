@@ -4,8 +4,11 @@ import os
 
 allowed=['BEG (Evaluation)', 'INT(Evaluation)', 'Advanced Quiz Questions', 'PRO(Evaluation)', 'PRO(V2)']
 def getDownloadFileURL(url):
-	
-	
+	isdrawing=False
+	if("drawing" in url):
+		#print(url)
+		isdrawing=True
+
 	url=url.replace("https://drive.google.com/open?id=", "")
 	url=url.replace("https://docs.google.com/drawings/d/", "")
 	url=url.replace("https://drive.google.com/file/d/", "")
@@ -14,7 +17,10 @@ def getDownloadFileURL(url):
 	if(url.strip()+""==""):
 		downloadURL=""
 	else:
-		downloadURL="https://drive.google.com/uc?export=download&id="+url
+		if(isdrawing):
+			downloadURL="https://docs.google.com/drawings/d/"+url+"/export/png"
+		else:	
+			downloadURL="https://drive.google.com/uc?export=download&id="+url
 	
 	return downloadURL
 

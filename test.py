@@ -99,6 +99,7 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 		optionDImage=sheet.cell_value(row, 14)
 		optionDText=formatText(sheet.cell_value(row, 15))
 		answer=sheet.cell_value(row, 16)
+		explaination=sheet.cell_value(row, 19)
 
 		
 
@@ -133,6 +134,7 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 		htmlData=htmlData.replace("#AnswerOption", answer)
 		htmlData=htmlData.replace("#previousLink", previousfileName)
 		htmlData=htmlData.replace("#nextLink", nextFileName)
+		htmlData=htmlData.replace("#Explaination", str(explaination))
 		with open(os.path.join(foldername, outputfileName), 'wb') as temp_file:
 			temp_file.write(bytes(htmlData, 'utf-8'))
 		#outfile.write(htmlData)

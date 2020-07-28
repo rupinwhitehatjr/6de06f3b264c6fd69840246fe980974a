@@ -140,6 +140,7 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 		explaination=sheet.cell_value(row, offset+17)
 		activity=sheet.cell_value(row, offset+18)
 		solution=sheet.cell_value(row, offset+19)
+		status=sheet.cell_value(row, offset+20)
 
 		
 
@@ -200,6 +201,10 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 		htmlData=htmlData.replace("#Explaination", str(explaination))
 		htmlData=htmlData.replace("#activity", str(activity))
 		htmlData=htmlData.replace("#solution", str(solution))
+		if(status=="Approved"):
+			htmlData=htmlData.replace("#color", "white")
+		else:
+			htmlData=htmlData.replace("#color", "red")	
 		with open(os.path.join(foldername, outputfileName), 'wb') as temp_file:
 			temp_file.write(bytes(htmlData, 'utf-8'))
 		#outfile.write(htmlData)

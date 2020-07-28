@@ -30,3 +30,14 @@ a
   color:#00F;
 }
 
+.red
+{
+  background-color: red;
+  color:white;
+}
+.white
+{
+  background-color: white;
+  color:#000;
+}
+

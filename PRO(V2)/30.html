@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 5.0 in class 6.0 of Professional-v2
+    Question Number: 3.0 in class 6.0 of Professional-v2
   </h2>
   <div class="grid_12">
     <p>
-     <b>Q.</b> Idnetify the correct syntax to add text to our canvas at a certain position
+     <b>Q.</b> While designing the pong game, we made an error in which the ball bounces off all the walls, select the correct option to fix this issue
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   Idnetify the correct syntax to add text to our canvas at a certain positionimage
+   <img src='https://drive.google.com/uc?export=download&id=1fj9NdKgw275BoyBQ_TKMSu-YSgtSQ29B'>
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,15 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: text( x position, y position, "message");
+     <b>A</b>: Remove  ball.bounceOff(topEdge);
+ & ball.bounceOff(bottomEdge);
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: text("message");
+       <b> B</b>: Remove ball.bounceOff(leftEdge);
+  & ball.bounce(rightEdge);
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,7 +59,8 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: text("message", x position, y position );
+      <b>C</b>: Remove ball.bounceOff(playerPaddle); &
+  ball.bounceOff(computerPaddle);
     </p>
   </div>
  <div class="clear"></div>
@@ -71,7 +74,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 3 (Text)
+      <b>Answer:</b>Option 2 (text)
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -79,7 +82,7 @@
 
    <div class="grid_12">
     <p>
-      <b>Explaination:</b>The correct syntax for adding text to the canvas is: text(str, x, y);
+      <b>Explaination:</b>In the code snippet we can observe that the ball bounces off all the edges, but for the pong game we do not want the ball to bounce off left and right edges. So we have to remove ball.bounceOff(leftEdge); and ball.bounceOff(rightEdge);
     </p>
   </div>
   <!-- end .grid_12 -->

@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 2.0 in class 8.0 of Professional-v2
+    Question Number: 5.0 in class 8.0 of Professional-v2
   </h2>
   <div class="grid_12 white">
     <p>
-     <b>Q.</b> While designing the world's hardest game we made an error shown in the activity link. Which code block from the option should we replace to correct the error?
+     <b>Q.</b> While creating the world's hardest game we have to add a condition such that when the ding touches any dong in the game, the position of ding should reset. Which of the following is a correct option?
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   While designing the world's hardest game we made an error shown in the activity link. Which code block from the option should we replace to correct the error?image
+   While creating the world's hardest game we have to add a condition such that when the ding touches any dong in the game, the position of ding should reset. Which of the following is a correct option?image
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,27 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: var wall10 = createSprite(190,220,250,3);
+     <b>A</b>: if(ding.Touching(dong1) ||
+    ding.Touching(dong2) ||
+    ding.Touching(dong3) ||
+    ding.Touching(dong4))
+     {
+       ding.x = 40;
+       ding.y = 190;
+     }
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: var wall2 = createSprite(190,220,250,3);
+       <b> B</b>: if(ding.isTouching(dong1) ||
+    ding.isTouching(dong2) ||
+    ding.isTouching(dong3) ||
+    ding.isTouching(dong4))
+     {
+       ding.x = 40;
+       ding.y = 190;
+     }
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,13 +71,27 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: var wall11 = createSprite(190,220,250,3);
+      <b>C</b>: if(ding.bounceOff(dong1) ||
+    ding.bounceOff(dong2) ||
+    ding.bounceOff(dong3) ||
+    ding.bounceOff(dong4))
+     {
+       ding.x = 40;
+       ding.y = 190;
+     }
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: var wall1 = createSprite(190,120,250,3);
+      <b>D</b>: "if(ding.isTouching(dong1) &&
+    ding.isTouching(dong2) &&
+    ding.isTouching(dong3) &&
+    ding.isTouching(dong4))
+     {
+       ding.x = 40;
+       ding.y = 190;
+     }"
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -71,7 +99,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 4 (text)
+      <b>Answer:</b>Option 2 (text)
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -79,7 +107,7 @@
 
    <div class="grid_12">
     <p>
-      <b>Explaination:</b>No explaination needed
+      <b>Explaination:</b>We have to add conditions such that when the ding touches dong1, dong2, dong3 and dong4 the game should reset. In order to achieve this we have to add "if" statement with "or" condition. The correct syntax for it is: if ((condition1) || (condition2) || (condition3) || (condition4)) { code; }
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -87,7 +115,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Activity Link:</b><a href='https://studio.code.org/projects/gamelab/w_09WHNZRPBqvIx5I0xMTFEE2ExlI92JjBIYBdgLB_I'>https://studio.code.org/projects/gamelab/w_09WHNZRPBqvIx5I0xMTFEE2ExlI92JjBIYBdgLB_I</a>
+      <b>Activity Link:</b><a href='https://studio.code.org/projects/gamelab/zzchXgHAlzujPVfMIwtyxvbvdqthtzF7W-bQm8hnCoM'>https://studio.code.org/projects/gamelab/zzchXgHAlzujPVfMIwtyxvbvdqthtzF7W-bQm8hnCoM</a>
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -95,7 +123,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Solution Link:</b><a href='https://studio.code.org/projects/gamelab/bccIZAj_KEpCFwt_m9I5cWZySsIHHkBk13s_I0ypFXw'>https://studio.code.org/projects/gamelab/bccIZAj_KEpCFwt_m9I5cWZySsIHHkBk13s_I0ypFXw</a>
+      <b>Solution Link:</b><a href='https://studio.code.org/projects/gamelab/cXrzDPQzaq_J2rESpseLMmmwvjQidvsuSTNokueq_Mo'>https://studio.code.org/projects/gamelab/cXrzDPQzaq_J2rESpseLMmmwvjQidvsuSTNokueq_Mo</a>
     </p>
   </div>
   <!-- end .grid_12 -->

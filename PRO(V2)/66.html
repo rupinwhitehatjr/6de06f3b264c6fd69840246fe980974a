@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Class 13.0 of Professional-v2</title>
+<title>Class 14.0 of Professional-v2</title>
 <link rel="stylesheet" href="../css/reset.css" />
 <link rel="stylesheet" href="../css/text.css" />
 <link rel="stylesheet" href="../css/960.css" />
@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 2.0 in class 13.0 of Professional-v2
+    Question Number: 1.0 in class 14.0 of Professional-v2
   </h2>
   <div class="grid_12 white">
     <p>
-     <b>Q.</b> Which option should be selected to end the game or change the gameState to END, when obstacle touches the trex? The objective is to stop the ground
+     <b>Q.</b> You can turn on the collision radius by using
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   Which option should be selected to end the game or change the gameState to END, when obstacle touches the trex? The objective is to stop the groundimage
+   You can turn on the collision radius by usingimage
   </div>
   
   <!-- end .grid_12 -->
@@ -43,17 +43,13 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: if(obstacles.isTouching(trex)){
-        gameState = END;
-    }
+     <b>A</b>: trex.collisionRadius = true;
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: if(obstaclesGroup.isTouching(trex)){
-        gameState = END;
-    }
+       <b> B</b>: trex.collision = true ;
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -61,15 +57,13 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: if(obstacles.Touching(trex)){
-        gameState = END;
-    }
+      <b>C</b>: trex.debug = true;
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: None of the above
+      <b>D</b>: none of these
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -77,7 +71,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 2 (text)
+      <b>Answer:</b>Option 3 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Class 7.0 of Professional-v2</title>
+<title>Class 8.0 of Professional-v2</title>
 <link rel="stylesheet" href="../css/reset.css" />
 <link rel="stylesheet" href="../css/text.css" />
 <link rel="stylesheet" href="../css/960.css" />
@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 4.0 in class 7.0 of Professional-v2
+    Question Number: 3.0 in class 8.0 of Professional-v2
   </h2>
   <div class="grid_12 white">
     <p>
-     <b>Q.</b> Which command should we use to add properties when key is pressed and when key is released?
+     <b>Q.</b> We want to move the ball in the correct direction until the respective key is pressed (left & right arrow keys). Choose the correct code to make the ball move only until the key is kept pressed.
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   Which command should we use to add properties when key is pressed and when key is released?image
+   We want to move the ball in the correct direction until the respective key is pressed (left & right arrow keys). Choose the correct code to make the ball move only until the key is kept pressed.image
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,25 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: keydown(); and keyup();
+     <b>A</b>: if(keyWentDown("right")) {
+    ball.x = ball.x + 2;
+  }
+  
+  if(keyWentDown("left")) {
+    ball.x = ball.x - 2;
+  }
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: keyIsDown(); and keyIsUp();
+       <b> B</b>: if(keyDown("right")) {
+    ball.x = ball.x - 2;
+  }
+  
+  if(keyDown("left")) {
+    ball.x = ball.x + 2;
+  }
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,13 +69,19 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: KeyIsDown(); and KeyIsUp();
+      <b>C</b>: if(keyDown("right")) {
+    ball.x = ball.x + 2;
+  }
+  
+  if(keyDown("left")) {
+    ball.x = ball.x - 2;
+  }
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: keyWentDown(); and keyWentUp();
+      <b>D</b>: None of the above
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -71,7 +89,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 4 (text)
+      <b>Answer:</b>Option 3 (text)
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -79,9 +97,7 @@
 
    <div class="grid_12">
     <p>
-      <b>Explaination:</b>The correct syntax to check if the key is pressed is : keyWentDown("code") ;
-The correct syntax to check if the key is released is : keyWentUp("code") ;
-
+      <b>Explaination:</b>We want to move the ball to the right when right key is kept pressed so we have to add constant value in x direction and when we want  the ball to the left when left key is kept pressed we have to subtract constant value in x direction. And correct syntax for key pressed event in code.org is keyDown("kay name");
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -89,7 +105,7 @@ The correct syntax to check if the key is released is : keyWentUp("code") ;
 
   <div class="grid_12">
     <p>
-      <b>Activity Link:</b><a href=''></a>
+      <b>Activity Link:</b><a href='https://studio.code.org/projects/gamelab/cXrzDPQzaq_J2rESpseLMjth5tBSJoVAGHjZkfydO6Y'>https://studio.code.org/projects/gamelab/cXrzDPQzaq_J2rESpseLMjth5tBSJoVAGHjZkfydO6Y</a>
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -97,7 +113,7 @@ The correct syntax to check if the key is released is : keyWentUp("code") ;
 
   <div class="grid_12">
     <p>
-      <b>Solution Link:</b><a href=''></a>
+      <b>Solution Link:</b><a href='https://studio.code.org/projects/gamelab/cXrzDPQzaq_J2rESpseLMi7y9Du01IgYoz_M2DwTs6k'>https://studio.code.org/projects/gamelab/cXrzDPQzaq_J2rESpseLMi7y9Du01IgYoz_M2DwTs6k</a>
     </p>
   </div>
   <!-- end .grid_12 -->

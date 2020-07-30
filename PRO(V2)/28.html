@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 1.0 in class 6.0 of Professional-v2
+    Question Number: 3.0 in class 6.0 of Professional-v2
   </h2>
   <div class="grid_12 white">
     <p>
-     <b>Q.</b> Select the correct code block to add a gameover state and also add a button to restart the game
+     <b>Q.</b> While designing the pong game, we made an error in which the ball bounces off all the walls, select the correct option to fix this issue
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   Select the correct code block to add a gameover state and also add a button to restart the gameimage
+   <img src='https://drive.google.com/uc?export=download&id=1fj9NdKgw275BoyBQ_TKMSu-YSgtSQ29B'>
   </div>
   
   <!-- end .grid_12 -->
@@ -43,19 +43,15 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: if (gameState === "over") {
-    text("Game Over!",170,160);
-    text("Press 'R' to Restart",150,180);
-  }
+     <b>A</b>: Remove  ball.bounceOff(topEdge);
+ & ball.bounceOff(bottomEdge);
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: if (gameState = "over") {
-    text("Game Over!",170,160);
-    text("Press 'R' to Restart",150,180);
-  }
+       <b> B</b>: Remove ball.bounceOff(leftEdge);
+  & ball.bounce(rightEdge);
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -63,9 +59,8 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: if (gameState === "over") {
-    text("Game Over!",170,160);
-  }
+      <b>C</b>: Remove ball.bounceOff(playerPaddle); &
+  ball.bounceOff(computerPaddle);
     </p>
   </div>
  <div class="clear"></div>
@@ -79,7 +74,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 1 (text)
+      <b>Answer:</b>Option 2 (text)
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -87,7 +82,7 @@
 
    <div class="grid_12">
     <p>
-      <b>Explaination:</b>The correct syntax for "if" condition is " if (condition) { (code block); }  and for checking if the condtions are equal we use "==="
+      <b>Explaination:</b>In the code snippet we can observe that the ball bounces off all the edges, but for the pong game we do not want the ball to bounce off left and right edges. So we have to remove ball.bounceOff(leftEdge); and ball.bounceOff(rightEdge);
     </p>
   </div>
   <!-- end .grid_12 -->

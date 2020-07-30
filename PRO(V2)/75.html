@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 2.0 in class 15.0 of Professional-v2
+    Question Number: 5.0 in class 15.0 of Professional-v2
   </h2>
   <div class="grid_12 white">
     <p>
-     <b>Q.</b> Find out the correct output possible for the below code
+     <b>Q.</b> Now we want to make our trex jump as soon as it touches an object. We have already removed some codes in our game. Choose the correct option to make this required change.
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   <img src='https://drive.google.com/uc?export=download&id=1YpDkG9D0j0iG89xZTZZEg8pCQk14SuDx'>
+   Now we want to make our trex jump as soon as it touches an object. We have already removed some codes in our game. Choose the correct option to make this required change.image
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,17 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: After every 30 frames the apple sprite will come from right edge to the screen
+     <b>A</b>: It cannot be done
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: After every 30 frames the apple sprite will come from left edge to the screen
+       <b> B</b>: if(obstaclesGroup.isTouching(trex)){
+      
+      trex.velocityY = 0;
+      jumpSound.play();
+}
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,13 +61,21 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: The apple sprite will be fomred once when frameCount is  30
+      <b>C</b>: if(cloudsGroup.isTouching(trex)){
+      
+      trex.velocityY = -12;
+      jumpSound.play();
+}
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: none of the above
+      <b>D</b>: if(obstaclesGroup.isTouching(trex)){
+      
+      trex.velocityY = -12;
+      jumpSound.play();
+}
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -71,7 +83,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 1 (text)
+      <b>Answer:</b>Option 4 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

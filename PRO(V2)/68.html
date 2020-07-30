@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Class 13.0 of Professional-v2</title>
+<title>Class 14.0 of Professional-v2</title>
 <link rel="stylesheet" href="../css/reset.css" />
 <link rel="stylesheet" href="../css/text.css" />
 <link rel="stylesheet" href="../css/960.css" />
@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 4.0 in class 13.0 of Professional-v2
+    Question Number: 3.0 in class 14.0 of Professional-v2
   </h2>
   <div class="grid_12 white">
     <p>
-     <b>Q.</b> As we can observe in the code snippet the clouds still moves even when the game ends. Choose the correct code to be placed in gameState === END to stop the cloud.
+     <b>Q.</b> As you can see our trex stops long before touching the obstacles. Which code should we choose to overcome this problem?
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   As we can observe in the code snippet the clouds still moves even when the game ends. Choose the correct code to be placed in gameState === END to stop the cloud.image
+   As you can see our trex stops long before touching the obstacles. Which code should we choose to overcome this problem?image
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,13 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: cloudsGroup.setVelocityXEach(0);
+     <b>A</b>: We need to add "trex.setCollider("circle", 0, 0, 40);" in setup function
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: cloudsGroup.setVelocity(0);
+       <b> B</b>: We need to add "trex.setCollider("circle", 0, 0, 40);" in draw function
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,13 +57,13 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: clouds.setVelocityXEach(0);
+      <b>C</b>: We need to add "trex.debug = true" in setup function
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: None of the above
+      <b>D</b>: Both 1 and 3
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -71,7 +71,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 1 (text)
+      <b>Answer:</b>Option 4(text)
     </p>
   </div>
   <!-- end .grid_12 -->

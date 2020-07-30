@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 2.0 in class 14.0 of Professional-v2
+    Question Number: 5.0 in class 14.0 of Professional-v2
   </h2>
   <div class="grid_12 white">
     <p>
-     <b>Q.</b> You can turn on the collision radius by using
+     <b>Q.</b> Now we have solved all the problems related to our trex. But as soon as the game ends the obstacles disappears. This problem is because of the Lifetime of obstcales. Choose the correct value of Lifetime such that the obstacles never disappears. (also the same for clouds) Please make sure that the obstacles never disappears
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   You can turn on the collision radius by usingimage
+   Now we have solved all the problems related to our trex. But as soon as the game ends the obstacles disappears. This problem is because of the Lifetime of obstcales. Choose the correct value of Lifetime such that the obstacles never disappears. (also the same for clouds) Please make sure that the obstacles never disappearsimage
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,17 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: trex.collisionRadius = true;
+     <b>A</b>: obstaclesGroup.setLifetimeEach(30);
+    cloudsGroup.setLifetimeEach(30);
+in gameState === PLAY
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: trex.collision = true ;
+       <b> B</b>: obstaclesGroup.setLifetimeEach(30);
+    cloudsGroup.setLifetimeEach(30);
+in gameState === END
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,13 +61,17 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: trex.debug = true;
+      <b>C</b>: obstaclesGroup.setLifetimeEach(-1);
+    cloudsGroup.setLifetimeEach(-1);
+in gameState === PLAY;
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: none of these
+      <b>D</b>: obstaclesGroup.setLifetimeEach(-1);
+    cloudsGroup.setLifetimeEach(-1);
+in gameState === END
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -71,7 +79,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 3 (text)
+      <b>Answer:</b>Option 4 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

@@ -26,7 +26,7 @@
   </h2>
   <div class="grid_12 white">
     <p>
-     <b>Q.</b> As we can observe in the code snippet the clouds still moves even when the game ends. Choose the correct code to be placed in gameState === END to stop the cloud.
+     <b>Q.</b> If you observe the code snippet, the clouds and obstacles still move even when the game ends. Choose the correct code to be placed inside the if(gameState === END) block to stop the clouds and the obstacles.
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   As we can observe in the code snippet the clouds still moves even when the game ends. Choose the correct code to be placed in gameState === END to stop the cloud.image
+   If you observe the code snippet, the clouds and obstacles still move even when the game ends. Choose the correct code to be placed inside the if(gameState === END) block to stop the clouds and the obstacles.image
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,15 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: cloudsGroup.setVelocityXEach(0);
+     <b>A</b>: obstaclesGroup.setVelocityXEach(0);
+cloudsGroup.setVelocityXEach(0);
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: cloudsGroup.setVelocity(0);
+       <b> B</b>: obstaclesGroup.setVelocity(0);
+cloudsGroup.setVelocity(0);
     </p>
   </div>
   <!-- end .grid_12 -->

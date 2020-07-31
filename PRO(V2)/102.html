@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 7.0 in class 21.0 of Professional-v1
+    Question Number: 2.0 in class 21.0 of Professional-v1
   </h2>
   <div class="grid_12 red">
     <p>
-     <b>Q.</b> What will be the result of code below?
+     <b>Q.</b> Idnetify the correct code for bounceOff function
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   <img src='https://drive.google.com/uc?export=download&id=1RVsMngXhOIzeVNOqXTH8tNa-c_ix9ERN'>
+   Idnetify the correct code for bounceOff functionimage
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,35 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: When movingRect touches fixedRect, then both change to 'red' color
+     <b>A</b>: function bounceOff(object1,object2){
+  if (object1.x - object2.x < object2.width/2 + object1.width/2
+    && object2.x - object1.x < object2.width/2 + object1.width/2) {
+    object1.velocityX = object1.velocityX * (-1);
+    object2.velocityX = object2.velocityX * (-1);
+  }
+  if (object1.y - object2.y < object2.height/2 + object1.height/2
+    && object2.y - object2.y < object2.height/2 + object1.height/2) {
+      object1.velocityY = object1.velocityY * (-1);
+      object2.velocityY = object2.velocityY * (-1);
+  } 
+}
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: When movingRect does not touch fixedRect, then both remain 'green' in color
+       <b> B</b>: function bounceOff(object1,object2){
+  if (object1.x - object2.x < object2.width/2 + object1.width/2
+    && object2.x - object1.x < object2.width/2 + object1.width/2) {
+    object1.velocityX = object1.velocityX * (1);
+    object2.velocityX = object2.velocityX * (1);
+  }
+  if (object1.y - object2.y < object2.height/2 + object1.height/2
+    && object2.y - object2.y < object2.height/2 + object1.height/2) {
+      object1.velocityY = object1.velocityY * (1);
+      object2.velocityY = object2.velocityY * (1);
+  } 
+}
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,7 +79,13 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: Both A and B
+      <b>C</b>: function bounceOff(object1,object2){
+  if (object1.x - object2.x < object2.width/2 + object1.width/2
+    && object2.x - object1.x < object2.width/2 + object1.width/2) {
+    object1.velocityX = object1.velocityX * (-1);
+    object2.velocityX = object2.velocityX * (-1);
+  }
+}
     </p>
   </div>
  <div class="clear"></div>
@@ -71,7 +99,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 3 (text)
+      <b>Answer:</b>Option 1 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

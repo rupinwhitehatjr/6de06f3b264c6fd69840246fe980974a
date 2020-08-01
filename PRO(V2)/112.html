@@ -26,7 +26,7 @@
   </h2>
   <div class="grid_12 red">
     <p>
-     <b>Q.</b> What is the correct way of drawing an object?
+     <b>Q.</b> Identify the correct code for the box to rotate while falling (use push() and pop() functions in box.js of the given code snippet)
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   What is the correct way of drawing an object?image
+   Identify the correct code for the box to rotate while falling (use push() and pop() functions in box.js of the given code snippet)image
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,25 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: <img src='https://drive.google.com/uc?export=download&id=1tssaUtM98hFcMQ98-zMhn43dtyUDyfZb'>
+     <b>A</b>: pop();
+    translate(pos.x, pos.y);
+    rotate(angle);
+    rectMode(CENTER);
+    fill(255);
+    rect(0, 0, this.width, this.height);
+    push();
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: <img src='https://drive.google.com/uc?export=download&id=1USKbJH2s3_Orw4imixOwkr0ASzh6muvt'>
+       <b> B</b>: push();
+    translate(pos.x, pos.y);
+    rotate(angle);
+    rectMode(CENTER);
+    fill(255);
+    rect(0, 0, this.width, this.height);
+    pop();
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,13 +69,25 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: <img src='https://drive.google.com/uc?export=download&id=1iElc3sDzjUmkNb-aRt4RN1wP9veA92z1'>
+      <b>C</b>: translate(pos.x, pos.y);
+ push();
+    rotate(angle);
+    rectMode(CENTER);
+    fill(255);
+    rect(0, 0, this.width, this.height);
+    pop();
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: <img src='https://drive.google.com/uc?export=download&id=16Wmg2iwFK_Y1iSnfLQBTh0fyAiDNBUSp'>
+      <b>D</b>: translate(pos.x, pos.y);
+push();
+    rotate(angle);
+pop();
+    rectMode(CENTER);
+    fill(255);
+    rect(0, 0, this.width, this.height);
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -71,7 +95,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 1 (image)
+      <b>Answer:</b>Option 2 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

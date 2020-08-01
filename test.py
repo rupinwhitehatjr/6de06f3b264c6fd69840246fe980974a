@@ -140,7 +140,7 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 		explaination=sheet.cell_value(row, offset+17)
 		activity=sheet.cell_value(row, offset+18)
 		solution=sheet.cell_value(row, offset+19)
-		status=sheet.cell_value(row, offset+20)
+		status=sheet.cell_value(row, offset+21)
 
 		
 
@@ -201,7 +201,7 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 		htmlData=htmlData.replace("#Explaination", str(explaination))
 		htmlData=htmlData.replace("#activity", str(activity))
 		htmlData=htmlData.replace("#solution", str(solution))
-		if(status=="Approved"):
+		if(status=="Shortlisted"):
 			htmlData=htmlData.replace("#color", "white")
 		else:
 			htmlData=htmlData.replace("#color", "red")	

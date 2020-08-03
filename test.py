@@ -2,7 +2,7 @@
 import xlrd
 import os
 from datetime import datetime
-allowed=['BEG (Evaluation)', 'INT(Evaluation)', 'Advanced Quiz Questions', 'PRO(Evaluation)', 'PRO(V2)']
+allowed=['BEG (Evaluation)', 'INT(Evaluation)', 'ADV(Evaluation)New', 'Advanced Quiz Questions', 'PRO(Evaluation)', 'PRO(V2)']
 def getDownloadFileURL(url):
 	isdrawing=False
 	if("drawing" in url):

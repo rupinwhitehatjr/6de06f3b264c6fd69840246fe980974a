@@ -49,7 +49,7 @@ def main():
 	#templateFile = open("template.html", "r")
 	#templateHTML=templateFile.read()
 	index=0
-	print(xlFile.sheet_names())
+	#print(xlFile.sheet_names())
 	#exit()
 	for sheetname in xlFile.sheet_names():
 		

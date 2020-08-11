@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 3.0 in class 16.0 of Professional-v1
+    Question Number: 1.0 in class 16.0 of Professional-v1
   </h2>
   <div class="grid_12 white">
     <p>
-     <b>Q.</b> We created a game in which we kill zombies. All zombies belong to a group zombiesGroup, we want to destroy each zombie once the game ends. Which option should we choose?
+     <b>Q.</b> In the following image you can see that we have added an image called start. We want to add a function in our game such that when we click over "Start" the game should call the function play(). Choose the correct option for the same.
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   We created a game in which we kill zombies. All zombies belong to a group zombiesGroup, we want to destroy each zombie once the game ends. Which option should we choose?image
+   <img src='https://drive.google.com/uc?export=download&id=18W5O7JUKdfyOFJKEBPZ82ZqNX92eWyU7'>
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,17 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: zombies.destroy();
+     <b>A</b>: if (mousePressed(start)) {
+      play();
+    }
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: destroyEach();
+       <b> B</b>: if (mousePressedOver(start)) {
+      start();
+    }
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,7 +61,9 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: zombiesGroup.destroyEach();
+      <b>C</b>: if (mousePressedOver(start)) {
+      play();
+    }
     </p>
   </div>
  <div class="clear"></div>

@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 4.0 in class 19.0 of Professional-v1
+    Question Number: 2.0 in class 19.0 of Professional-v1
   </h2>
   <div class="grid_12 red">
     <p>
-     <b>Q.</b> Select the correct code to restart the game on pressing restart icon.
+     <b>Q.</b> Using which option, already displayed animation for the sprite can be changed to some other animation in P5.
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   <img src='https://drive.google.com/uc?export=download&id=1p39pouT87Z2CxsnuBfurbBDP0SbmkkKM'>
+   Using which option, already displayed animation for the sprite can be changed to some other animation in P5.image
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,13 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: else if (gameState === END) { 	if(mousePressedOver(restart)) {               reset();             }       }
+     <b>A</b>: function preload(){ 	trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");      }
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: if (gameState === PLAY) {         if(mousePressedOver(restart)) {               reset();             }       }
+       <b> B</b>: trex.changeAnimation("collided",trex_collided);
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,13 +57,13 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: if(obstaclesGroup.isTouching(trex)){         gameState = END;      }
+      <b>C</b>: trex.setAnimation("trex_collided.png");
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: if(keyDown("space") && trex.y >= 159) {       trex.velocityY = -12;     }
+      <b>D</b>: trex.addAnimation("running", trex_running);
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -71,7 +71,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 1 (text)
+      <b>Answer:</b>Option 2 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

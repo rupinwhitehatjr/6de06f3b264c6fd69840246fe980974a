@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Class 16.0 of Professional-v1</title>
+<title>Class 15.0 of Professional-v1</title>
 <link rel="stylesheet" href="../css/reset.css" />
 <link rel="stylesheet" href="../css/text.css" />
 <link rel="stylesheet" href="../css/960.css" />
@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 1.0 in class 16.0 of Professional-v1
+    Question Number: 4.0 in class 15.0 of Professional-v1
   </h2>
   <div class="grid_12 white">
     <p>
-     <b>Q.</b> In the following image you can see that we have added an image called start. We want to add a function in our game such that when we click over "Start" the game should call the function play(). Choose the correct option for the same.
+     <b>Q.</b> Select the correct option to increase the speed of the obstacles every time the player scores 100, 200, 300, 400 and so on.
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   <img src='https://drive.google.com/uc?export=download&id=18W5O7JUKdfyOFJKEBPZ82ZqNX92eWyU7'>
+   Select the correct option to increase the speed of the obstacles every time the player scores 100, 200, 300, 400 and so on.image
   </div>
   
   <!-- end .grid_12 -->
@@ -43,17 +43,13 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: if (mousePressed(start)) {
-      play();
-    }
+     <b>A</b>: obstacle.velocityX = - (6 + count/100);
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: if (mousePressedOver(start)) {
-      start();
-    }
+       <b> B</b>: obstacle.velocityX = - (6 + count%100);
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -61,15 +57,13 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: if (mousePressedOver(start)) {
-      play();
-    }
+      <b>C</b>: obstacle.velocityY = - (6 + count%100);
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: None of the above
+      <b>D</b>: obstacle.velocityY = - (6 + count/100);
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -77,7 +71,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 3 (text)
+      <b>Answer:</b>Option 1 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

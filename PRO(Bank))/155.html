@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 3.0 in class 27.0 of Professional-v1
+    Question Number: 1.0 in class 27.0 of Professional-v1
   </h2>
   <div class="grid_12 white">
     <p>
-     <b>Q.</b> We want to show connections between two bodies just like we did in angry bird game between the bird and the log. Which option should we choose?
+     <b>Q.</b> Which of the following is the correct way of creating a contraint object called rope?
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   We want to show connections between two bodies just like we did in angry bird game between the bird and the log. Which option should we choose?image
+   Which of the following is the correct way of creating a contraint object called rope?image
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,15 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: line ( bodyA.body.position.x , bodyA.body.position.y ,  bodyB.body.position.x , bodyB.body.position.y)
+     <b>A</b>: var rope = Constraint.create(options); 
+World.add(World,  rope);
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: rect ( bodyA.body.position.x , bodyA.body.position.y , bodyB.body.position.x , bodyB.body.position.y)
+       <b> B</b>: Constraint.create(rope); 
+World.add(World,  rope);
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,7 +59,8 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: stroke ( bodyA.body.position.x , bodyA.body.position.y , bodyB.body.position.x , bodyB.body.position.y)
+      <b>C</b>: var rope = create.options;
+World.add(World, rope);
     </p>
   </div>
  <div class="clear"></div>
@@ -71,7 +74,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 1 (text)
+      <b>Answer:</b>Option 1 (text1)
     </p>
   </div>
   <!-- end .grid_12 -->

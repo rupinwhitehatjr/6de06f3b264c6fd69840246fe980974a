@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 1.0 in class 13.0 of Professional-v1
+    Question Number: 7.0 in class 13.0 of Professional-v1
   </h2>
   <div class="grid_12 red">
     <p>
-     <b>Q.</b> Which of the following is NOT the correct way to use the gameState?
+     <b>Q.</b> Choose the correct code for making trex jump, when space key is pressed and trex vertical position is greater than or equals to 300. (NOte: student can verify variable declaration as per class)
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   Which of the following is NOT the correct way to use the gameState?image
+   Choose the correct code for making trex jump, when space key is pressed and trex vertical position is greater than or equals to 300. (NOte: student can verify variable declaration as per class)image
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,13 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: if( ball.x > 0 ) {   gameState =  “end”   }
+     <b>A</b>: if(keyDown(“space”) && trex.y>=300){              trex.velocity=-12;            }
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: if( gameState == “play”) {   MoveBall();   }
+       <b> B</b>: if(keyDown(“space”) && trex.y>=300){              trex.velocityY=-12;            }
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,13 +57,13 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: if( target.isTouching(topEdge)) {   gameState =  “win”   }
+      <b>C</b>: if(keyDown(“space”) && trex.y>=300){              trex.velocityX=-12;            }
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: if( gameState = “serve”) {   ball.x = 200;   ball.y = 200;   }
+      <b>D</b>: if(keyDown(“space”) && trex.y>=300){              trex.velocityy=-12;            }
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -71,7 +71,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 4 (text)
+      <b>Answer:</b>Option 2 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

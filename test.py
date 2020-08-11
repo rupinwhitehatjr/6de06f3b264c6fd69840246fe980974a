@@ -2,8 +2,8 @@
 import xlrd
 import os
 from datetime import datetime
-#allowed=['BEG (Evaluation)', 'INT(Evaluation)', 'ADV(Evaluation)New', 'Advanced Quiz Questions', 'PRO(Bank))', 'PRO(V2)']
-allowed=['BEG (Bank))', 'INT(Bank)', 'PRO(Bank))', 'ADV (Worksheet)']
+allowed=['BEG (Bank))', 'INT(Bank)', 'INT (Remaining Final Quest)',  'ADV (Worksheet)', 'PRO(Bank))',  'ADV (Worksheet)']
+#allowed=['BEG (Bank))', 'INT(Bank)', 'PRO(Bank))', 'ADV (Worksheet)', 'INT (V2) C1-24']
 def getDownloadFileURL(url):
 	isdrawing=False
 	if("drawing" in url):
@@ -38,6 +38,8 @@ def formatText(textData):
 
 
 def main():
+	#xlFile=xlrd.open_workbook("Final Quiz Questions (1-24).xlsx")
+	
 	xlFile=xlrd.open_workbook("Be a Quiz Master - Challenge (Responses).xlsx")
 	indexTemplatefile = open("indexTemplate.html", "r")
 	indexhtml=indexTemplatefile.read()
@@ -49,7 +51,7 @@ def main():
 	#templateFile = open("template.html", "r")
 	#templateHTML=templateFile.read()
 	index=0
-	#print(xlFile.sheet_names())
+	print(xlFile.sheet_names())
 	#exit()
 	for sheetname in xlFile.sheet_names():
 		

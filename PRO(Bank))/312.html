@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 7.0 in class 13.0 of Professional-v1
+    Question Number: 5.0 in class 13.0 of Professional-v1
   </h2>
   <div class="grid_12 red">
     <p>
-     <b>Q.</b> The group has been created for obstacles ( var ObstaclesGroup = createGroup(); ) and all the obstacle sprites have been added into it. Now, when the trex collides with the obstacles we want to stop the obstacles from moving. Which of the following is the right syntax for it?
+     <b>Q.</b> When the gameState is END we have written the code for obstacles to stop moving. Why are the obstacles are still moving after the trex touches them?
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   The group has been created for obstacles ( var ObstaclesGroup = createGroup(); ) and all the obstacle sprites have been added into it. Now, when the trex collides with the obstacles we want to stop the obstacles from moving. Which of the following is the right syntax for it?image
+   <img src='https://drive.google.com/uc?export=download&id=18Bfiq3ziSy9xIYR6ItQdsNBpfbLGY9Q5'>
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,13 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: ObstaclesGroup.velocityX = 0;
+     <b>A</b>: Because we are spawning obstacles even when gameState is END
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: obstaclesGroup.velocityX = 0;
+       <b> B</b>: We haven’t given the condition to make gameState  = END in spite of touching obstacles we are still in gameState = PLAY;
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,13 +57,13 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: obstaclesGroup. setVelocityXEach = 0;
+      <b>C</b>: Because trex is not added in the obstacle group
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: ObstaclesGroup.setVelocityXEach(0);
+      <b>D</b>: Because clouds and trex are spawned at different times
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -71,7 +71,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 4 (text)
+      <b>Answer:</b>Option 2 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

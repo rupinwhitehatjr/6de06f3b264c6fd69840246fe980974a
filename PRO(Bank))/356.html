@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 5.0 in class 14.0 of Professional-v1
+    Question Number: 3.0 in class 14.0 of Professional-v1
   </h2>
   <div class="grid_12 red">
     <p>
-     <b>Q.</b> What will happen if I add trex.velocityY = -12; when gameState is END?
+     <b>Q.</b> How to prevent obstacles from disappearing after the game ends?
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   What will happen if I add trex.velocityY = -12; when gameState is END?image
+   How to prevent obstacles from disappearing after the game ends?image
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,13 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: Trex will move upwards as soon as game ends
+     <b>A</b>: Add ObstaclesGroup.setVelocityXEach(0); in the function spawnClouds();
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: Trex will jump up and fall back to ground when the game ends
+       <b> B</b>: Add CloudsGroup.setVelocityXEach(0); when gameState is PLAY
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,13 +57,13 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: Trex will not move upwards when the game ends
+      <b>C</b>: Add ObstaclesGroup.setVelocityXEach(0); when gameState is END
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: Trex will move towards left
+      <b>D</b>: Add ObstaclesGroup.setVelocityXEach(0); when gameState is PLAY
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -71,7 +71,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 1 (text)
+      <b>Answer:</b>Option 3 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

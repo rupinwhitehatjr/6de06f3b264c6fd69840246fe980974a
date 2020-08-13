@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 9.0 in class 57.0 of Professional-v1
+    Question Number: 8.0 in class 57.0 of Professional-v1
   </h2>
   <div class="grid_12 red">
     <p>
-     <b>Q.</b> What will be the output of this code snippet
+     <b>Q.</b> We can pass the color data from HomeScreen to BuzzerScreen using which instruction in the code snippet
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   <img src='https://drive.google.com/uc?export=download&id=1cUheODZGDopsFtoXTMqepfRlHjpFFZJW'>
+   <img src='https://drive.google.com/uc?export=download&id=13NTTaxNLN2UoBS4SfHjt8_NE_xjrKu9_'>
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,13 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: 8 Buttons
+     <b>A</b>: <SoundButton color={this.props.navigation('color')}/>
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: 4 Buttons and 4 buzzers
+       <b> B</b>: <SoundButton color={this.props.getParam('color')}/>
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,13 +57,13 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: 4Buttons clicking on it will navigate to the Buzzer of same color as the button
+      <b>C</b>: <SoundButton color={this.props.navigation.navigate('color')}/>
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: None of the above
+      <b>D</b>: <SoundButton color={this.props.navigation.getParam('color')}/>
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -71,7 +71,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 3 (text)
+      <b>Answer:</b>Option 4 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

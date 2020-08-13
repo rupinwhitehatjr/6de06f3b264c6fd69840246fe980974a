@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 3.0 in class 30.0 of Professional-v1
+    Question Number: 2.0 in class 30.0 of Professional-v1
   </h2>
   <div class="grid_12 red">
     <p>
-     <b>Q.</b> Which one of the following code is to remove object from the world?
+     <b>Q.</b> Which of the following function will attach the bird to its sling when space is pressed? (Assume parameters to be given and declared) – Refer to your existing code(VB)
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   Which one of the following code is to remove object from the world?image
+   Which of the following function will attach the bird to its sling when space is pressed? (Assume parameters to be given and declared) – Refer to your existing code(VB)image
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,13 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: World.remove(world, this.body);
+     <b>A</b>: function keyReleased() { 	if(keyCode===32) 		slingshot.attach(bird.body); }
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: World.remove{this.body, world};
+       <b> B</b>: function keyPressed() { 	if(keyCode===13) 		slingshot.attach(bird.body); }
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,13 +57,13 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: Remove.world(this.body, world);
+      <b>C</b>: function keyReleased() { 	if(keyCode===13) 		slingshot.attach(bird.body); }
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-      <b>D</b>: Remove.world{world, this.body};
+      <b>D</b>: function keyPressed() { 	if(keyCode===32) 		slingshot.attach(bird.body); }
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -71,7 +71,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 1 (text)
+      <b>Answer:</b>Option 4 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

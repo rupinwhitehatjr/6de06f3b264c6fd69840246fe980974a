@@ -22,11 +22,11 @@
   </div> 
 <div class="clear"></div> 
   <h2>
-    Question Number: 5.0 in class 14.0 of Professional-v1
+    Question Number: 4.0 in class 14.0 of Professional-v1
   </h2>
   <div class="grid_12 red">
     <p>
-     <b>Q.</b> In the PLAY state, we gave each obstacle a lifetime. Why did we do that?
+     <b>Q.</b> What we should assign as the lifetime so that the game objects will never disappear
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -35,7 +35,7 @@
   
 
   <div class="grid_12 centeredimage">
-   In the PLAY state, we gave each obstacle a lifetime. Why did we do that?image
+   What we should assign as the lifetime so that the game objects will never disappearimage
   </div>
   
   <!-- end .grid_12 -->
@@ -43,13 +43,13 @@
 
   <div class="grid_12">
     <p>
-     <b>A</b>: Because we want to disappear the obstacles
+     <b>A</b>: lifetime of all the spawned objects in the groups to be -1
     </p>
   </div>
  <div class="clear"></div>
   <div class="grid_12">
     <p>
-       <b> B</b>: Because we did not want any memory leak.
+       <b> B</b>: lifetime of all the spawned objects in the groups to be 0
     </p>
   </div>
   <!-- end .grid_12 -->
@@ -57,7 +57,7 @@
 
   <div class="grid_12">
     <p>
-      <b>C</b>: Because we did not want any obstacle at that time
+      <b>C</b>: lifetime of all the spawned objects in the groups to be 1
     </p>
   </div>
  <div class="clear"></div>
@@ -71,7 +71,7 @@
 
   <div class="grid_12">
     <p>
-      <b>Answer:</b>Option 2 (text)
+      <b>Answer:</b>Option 1 (text)
     </p>
   </div>
   <!-- end .grid_12 -->

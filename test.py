@@ -2,13 +2,20 @@
 import xlrd
 import os
 from datetime import datetime
-allowed=['BEG (Bank))', 'INT(Bank)', 'INT (Remaining Final Quest)',  'ADV (Worksheet)', 'PRO(Bank))',  'ADV (Worksheet)']
-#allowed=['BEG (Bank))', 'INT(Bank)', 'PRO(Bank))', 'ADV (Worksheet)', 'INT (V2) C1-24']
+#allowed=['BEG (Bank))', 'INT(Bank)', 'INT (Remaining Final Quest)',  'ADV (Worksheet)', 'PRO(Bank))',  'ADV (Worksheet)']
+allowed=['BEG (Bank))', 'Beg Final (25 - 40)', 'Int Final (25 - 40)', 'PRO(Bank))', 'PROV1(1-24)', 'INT(Bank)', 'ADV Final (25 - 40)', 'INT (Remaining Final Quest)', 'ADV (Worksheet)']
+#allowed=["ADV 1-24"]
+#allowed=[]
 def getDownloadFileURL(url):
 	isdrawing=False
+	#print(url)
+
+	if("amazonaws" in url):
+		return url
 	if("drawing" in url):
 		#print(url)
 		isdrawing=True
+
 
 	url=url.replace("https://drive.google.com/open?id=", "")
 	url=url.replace("https://docs.google.com/drawings/d/", "")
@@ -41,6 +48,8 @@ def main():
 	#xlFile=xlrd.open_workbook("Final Quiz Questions (1-24).xlsx")
 	
 	xlFile=xlrd.open_workbook("Be a Quiz Master - Challenge (Responses).xlsx")
+	#xlFile=xlrd.open_workbook("Updated Image Links-ADV.xlsx")
+	
 	indexTemplatefile = open("indexTemplate.html", "r")
 	indexhtml=indexTemplatefile.read()
 	indexTemplatefile.close()
@@ -51,7 +60,7 @@ def main():
 	#templateFile = open("template.html", "r")
 	#templateHTML=templateFile.read()
 	index=0
-	print(xlFile.sheet_names())
+	#print(xlFile.sheet_names())
 	#exit()
 	for sheetname in xlFile.sheet_names():
 		

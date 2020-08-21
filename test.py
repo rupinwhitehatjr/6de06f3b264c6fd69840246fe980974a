@@ -3,9 +3,9 @@ import xlrd
 import os
 from datetime import datetime
 #allowed=['BEG (Bank))', 'INT(Bank)', 'INT (Remaining Final Quest)',  'ADV (Worksheet)', 'PRO(Bank))',  'ADV (Worksheet)']
-allowed=['BEG (Bank))', 'Beg Final (25 - 40)', 'Int Final (25 - 40)', 'PRO(Bank))', 'PROV1(1-24)', 'INT(Bank)', 'ADV Final (25 - 40)', 'INT (Remaining Final Quest)', 'ADV (Worksheet)']
-#allowed=["ADV 1-24"]
-#allowed=[]
+#allowed=['BEG (Bank))', 'Beg Final (25 - 40)', 'Int Final (25 - 40)', 'INT V1 (1-10)', 'PRO(Bank))', 'PROV1(1-24)', 'INT(Bank)', 'ADV Final (25 - 40)', 'INT (Remaining Final Quest)', 'ADV (Worksheet)']
+#allowed=['BEG (V2) 1-24', 'ADV 1-24', 'PRO(V2) 1 -24', 'INT (V2) C1-24']
+allowed=['ADV 1-24']
 def getDownloadFileURL(url):
 	isdrawing=False
 	#print(url)
@@ -45,9 +45,9 @@ def formatText(textData):
 
 
 def main():
-	#xlFile=xlrd.open_workbook("Final Quiz Questions (1-24).xlsx")
+	xlFile=xlrd.open_workbook("Final Quiz Questions (1-24).xlsx")
 	
-	xlFile=xlrd.open_workbook("Be a Quiz Master - Challenge (Responses).xlsx")
+	#xlFile=xlrd.open_workbook("Be a Quiz Master - Challenge (Responses).xlsx")
 	#xlFile=xlrd.open_workbook("Updated Image Links-ADV.xlsx")
 	
 	indexTemplatefile = open("indexTemplate.html", "r")
@@ -123,11 +123,13 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 	#print(rows)
 	# For row 0 and column 0     
 	#print(sheet.cell_value(0, 0))
-	offset=2
+	rows=121
+	offset=1
 	for row in range(1,rows):
 		srno=formatText(sheet.cell_value(row, offset+0))
 		level=formatText(sheet.cell_value(row, offset+1))
-		#print(row)
+		#print(level)
+		print(row)
 		
 		version=formatText(sheet.cell_value(row, offset+2))
 		classNumber=formatText(sheet.cell_value(row, offset+3)) 
@@ -148,7 +150,9 @@ def generateHTMLFiles(workbook, sheetIndex,foldername):
 
 		optionDImage=sheet.cell_value(row, offset+14)
 		optionDText=formatText(sheet.cell_value(row, offset+15))
+		#print(optionDText)
 		answer=sheet.cell_value(row, offset+16)
+		#print(answer)
 		explaination=sheet.cell_value(row, offset+17)
 		activity=sheet.cell_value(row, offset+18)
 		solution=sheet.cell_value(row, offset+19)

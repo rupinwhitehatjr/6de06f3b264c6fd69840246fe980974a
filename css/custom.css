@@ -32,12 +32,18 @@ a
 
 .red
 {
-  background-color: red;
-  color:white;
+ background-color: white;
+  color:#000;
 }
 .white
 {
   background-color: white;
   color:#000;
+}
+textarea
+{
+  width:80%;
+  height:100px;
+  font: 20px Arial, sans-serif;
 }
 
